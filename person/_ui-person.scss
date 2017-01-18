@@ -1,0 +1,47 @@
+$mod-pv-small-size: 36px;
+$mod-pv-medium-size: 42px;
+$mod-pv-large-size: 60px;
+
+.mod-person-view {
+  display: inline-block;
+  & > {
+    .image-container {
+      line-height: calc(#{$mod-pv-medium-size} - 4px);
+      height: $mod-pv-medium-size;
+      width: $mod-pv-medium-size;
+      @include border-radius(50%);
+      border: 2px solid $color-white;
+      overflow: hidden;
+      text-align: center;
+      font-size: calc(#{$mod-pv-medium-size} / 2);
+      &.has-image {
+        background-position: 50% 50%;
+        background-size: cover;
+        @include hide-text;
+        &:hover {
+          border-color: $color-blue-2;
+        }
+      }
+      &.blue {
+        color: $color-blue-3;
+        border-color: $color-blue-3;
+      }
+      &.orange {
+        color: $color-orange;
+        border-color: $color-orange;
+      }
+      &.small {
+        width: $mod-pv-small-size;
+        height: $mod-pv-small-size;
+        font-size: calc(#{$mod-pv-small-size} / 2);
+        line-height: calc(#{$mod-pv-small-size} - 4px);
+      }
+      &.large {
+        width: $mod-pv-large-size;
+        height: $mod-pv-large-size;
+        font-size: calc(#{$mod-pv-large-size} / 2);
+        line-height: calc(#{$mod-pv-large-size} - 4px);
+      }
+    }
+  }
+}

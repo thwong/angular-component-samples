@@ -1,0 +1,19 @@
+<ng-transclude>
+  <div
+    ng-class="{ 'multiple search': uiac.isMultiple, 'error': uiac.errorFlag, 'search': uiac.api }"
+    class="ui fluid selection dropdown trigger"
+    ref="dropdown">
+    <div class="default text trigger" ng-if="uiac.placeholder">
+      {{::uiac.placeholder}}
+    </div>
+    <i class="dropdown icon"></i>
+    <div class="menu">
+      <div
+        class="item"
+        data-value="{{::item.value}}"
+        ng-repeat="item in uiac.items track by $index">
+        {{::item.name}}
+      </div>
+    </div>
+  </div>
+</ng-transclude>
